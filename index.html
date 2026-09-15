@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UrbanWear - Premium Fashion Clothing</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <h1>Urban<span>Wear</span></h1>
+                </div>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="shop.html?category=men">Men</a></li>
+                    <li><a href="shop.html?category=women">Women</a></li>
+                    <li><a href="shop.html?category=kids">Kids</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+                <div class="nav-icons">
+                    <button class="dark-mode-toggle" id="darkModeToggle" aria-label="Toggle dark mode">
+                        <span class="toggle-icon">🌙</span>
+                    </button>
+                    <button class="cart-icon" id="cartIcon" aria-label="Open cart">
+                        <span>🛒</span>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </button>
+                    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title" data-aos="fade-up">Fashion That Speaks Your Style</h1>
+            <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="100">Discover premium clothing for every occasion</p>
+            <a href="shop.html" class="btn btn-primary" data-aos="fade-up" data-aos-delay="200">Shop Now</a>
+        </div>
+        <div class="hero-overlay"></div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Shop by Category</h2>
+            <div class="categories-grid">
+                <div class="category-card" data-aos="fade-up" data-aos-delay="100">
+                    <a href="shop.html?category=men">
+                        <div class="category-image">
+                            <img src="https://images.unsplash.com/photo-1617137968427-85924c800a22?w=600&h=800&fit=crop" alt="Men's Collection">
+                        </div>
+                        <div class="category-content">
+                            <h3>Men</h3>
+                            <p>Premium menswear</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="category-card" data-aos="fade-up" data-aos-delay="200">
+                    <a href="shop.html?category=women">
+                        <div class="category-image">
+                            <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=600&h=800&fit=crop" alt="Women's Collection">
+                        </div>
+                        <div class="category-content">
+                            <h3>Women</h3>
+                            <p>Elegant womenswear</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="category-card" data-aos="fade-up" data-aos-delay="300">
+                    <a href="shop.html?category=kids">
+                        <div class="category-image">
+                            <img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=600&h=800&fit=crop" alt="Kids' Collection">
+                        </div>
+                        <div class="category-content">
+                            <h3>Kids</h3>
+                            <p>Comfortable kids wear</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products Section -->
+    <section class="featured-products">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Featured Products</h2>
+            <div class="products-grid" id="featuredProducts">
+                <!-- Products will be dynamically loaded -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h2>Your Cart</h2>
+            <button class="close-cart" id="closeCart">&times;</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <p class="empty-cart">Your cart is empty</p>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cartTotal">Rs 0</span>
+            </div>
+            <button class="btn btn-primary checkout-btn" id="checkoutBtn">Checkout</button>
+        </div>
+    </div>
+    <div class="cart-overlay" id="cartOverlay"></div>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>UrbanWear</h3>
+                    <p>Premium fashion for the modern lifestyle. Quality clothing that defines your style.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="shop.html?category=men">Men</a></li>
+                        <li><a href="shop.html?category=women">Women</a></li>
+                        <li><a href="shop.html?category=kids">Kids</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook">📘</a>
+                        <a href="#" aria-label="Instagram">📷</a>
+                        <a href="#" aria-label="Twitter">🐦</a>
+                        <a href="#" aria-label="Pinterest">📌</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 UrbanWear. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="api.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+

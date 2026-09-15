@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product - UrbanWear</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <h1>Urban<span>Wear</span></h1>
+                </div>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="shop.html?category=men">Men</a></li>
+                    <li><a href="shop.html?category=women">Women</a></li>
+                    <li><a href="shop.html?category=kids">Kids</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+                <div class="nav-icons">
+                    <button class="dark-mode-toggle" id="darkModeToggle" aria-label="Toggle dark mode">
+                        <span class="toggle-icon">🌙</span>
+                    </button>
+                    <button class="cart-icon" id="cartIcon" aria-label="Open cart">
+                        <span>🛒</span>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </button>
+                    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Product Section -->
+    <section class="product-detail">
+        <div class="container">
+            <div class="product-wrapper" id="productWrapper">
+                <!-- Product content will be dynamically loaded -->
+                <div class="product-images" data-aos="fade-right">
+                    <div class="main-image">
+                        <img id="mainProductImage" src="" alt="Product">
+                    </div>
+                    <div class="thumbnail-images" id="thumbnailImages">
+                        <!-- Thumbnails will be loaded dynamically -->
+                    </div>
+                </div>
+                <div class="product-info" data-aos="fade-left">
+                    <div class="breadcrumb">
+                        <a href="index.html">Home</a> / <a href="shop.html">Shop</a> / <span id="productCategory">Product</span>
+                    </div>
+                    <h1 class="product-title" id="productTitle">Product Name</h1>
+                    <div class="product-rating" id="productRating">
+                        <span class="stars">★★★★★</span>
+                        <span class="rating-text">(4.5)</span>
+                    </div>
+                    <div class="product-price" id="productPrice">
+                        <span class="current-price">Rs 0</span>
+                        <span class="original-price">Rs 0</span>
+                    </div>
+                    <p class="product-description" id="productDescription">
+                        Premium quality clothing designed for comfort and style. Made with sustainable materials and expert craftsmanship.
+                    </p>
+                    <div class="product-options">
+                        <div class="size-selector">
+                            <label>Size:</label>
+                            <div class="size-options">
+                                <button class="size-btn" data-size="S">S</button>
+                                <button class="size-btn" data-size="M">M</button>
+                                <button class="size-btn active" data-size="L">L</button>
+                                <button class="size-btn" data-size="XL">XL</button>
+                            </div>
+                        </div>
+                        <div class="quantity-selector">
+                            <label>Quantity:</label>
+                            <div class="quantity-controls">
+                                <button class="qty-btn" id="decreaseQty">-</button>
+                                <input type="number" id="quantity" value="1" min="1" max="10">
+                                <button class="qty-btn" id="increaseQty">+</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-actions">
+                        <button class="btn btn-primary add-to-cart-btn" id="addToCartBtn">
+                            Add to Cart
+                        </button>
+                        <button class="btn btn-secondary wishlist-btn" id="wishlistBtn">
+                            ♡ Wishlist
+                        </button>
+                    </div>
+                    <div class="product-details">
+                        <h3>Product Details</h3>
+                        <ul id="productDetailsList">
+                            <li>100% Premium Cotton</li>
+                            <li>Machine Washable</li>
+                            <li>Available in Multiple Colors</li>
+                            <li>Free Shipping on Orders Over Rs 10,000</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="reviews-section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Customer Reviews</h2>
+            <div class="reviews-container" id="reviewsContainer" data-aos="fade-up">
+                <!-- Reviews will be dynamically loaded -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Products -->
+    <section class="related-products">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">You May Also Like</h2>
+            <div class="products-grid" id="relatedProducts">
+                <!-- Related products will be dynamically loaded -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h2>Your Cart</h2>
+            <button class="close-cart" id="closeCart">&times;</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <p class="empty-cart">Your cart is empty</p>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cartTotal">Rs 0</span>
+            </div>
+            <button class="btn btn-primary checkout-btn" id="checkoutBtn">Checkout</button>
+        </div>
+    </div>
+    <div class="cart-overlay" id="cartOverlay"></div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>UrbanWear</h3>
+                    <p>Premium fashion for the modern lifestyle. Quality clothing that defines your style.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="shop.html?category=men">Men</a></li>
+                        <li><a href="shop.html?category=women">Women</a></li>
+                        <li><a href="shop.html?category=kids">Kids</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook">📘</a>
+                        <a href="#" aria-label="Instagram">📷</a>
+                        <a href="#" aria-label="Twitter">🐦</a>
+                        <a href="#" aria-label="Pinterest">📌</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 UrbanWear. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="api.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
